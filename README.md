@@ -1,6 +1,4 @@
 
-
-```markdown
 # Restaurant Application
 
 ## Overview
