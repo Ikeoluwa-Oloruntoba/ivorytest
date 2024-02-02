@@ -1,0 +1,695 @@
+{
+	"info": {
+		"_postman_id": "ac92b562-782b-4d4e-8b27-6f935ba2ae40",
+		"name": "ivorytest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11823852",
+		"_collection_link": "https://aileadtech.postman.co/workspace/My-Workspace~dbf3bff2-50f4-421c-8ace-116ecffbaac2/collection/11823852-ac92b562-782b-4d4e-8b27-6f935ba2ae40?action=share&source=collection_link&creator=11823852"
+	},
+	"item": [
+		{
+			"name": "Get Restaurants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3015/v1/restaurant/get?city=Lagos&latitude=23.34&longitude=25.336&distance=1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3015",
+					"path": [
+						"v1",
+						"restaurant",
+						"get"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Lagos"
+						},
+						{
+							"key": "latitude",
+							"value": "23.34"
+						},
+						{
+							"key": "longitude",
+							"value": "25.336"
+						},
+						{
+							"key": "distance",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Restaurants",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3015/v1/restaurant/get?city=Lagos&latitude=23.84&longitude=25.333&distance=1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3015",
+							"path": [
+								"v1",
+								"restaurant",
+								"get"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Lagos"
+								},
+								{
+									"key": "latitude",
+									"value": "23.84"
+								},
+								{
+									"key": "longitude",
+									"value": "25.333"
+								},
+								{
+									"key": "distance",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "359"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"167-/aq4FciEcZIx9vNY+Y1dkQJbMy0\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Feb 2024 16:16:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"Ivory Restaurant\",\n        \"address\": \"Iboro Lagssss\",\n        \"latitude\": 23.84,\n        \"longitude\": 25.34,\n        \"distance\": 711.9526515522119\n    },\n    {\n        \"name\": \"Ivory Restaurant 3\",\n        \"address\": \"Iboro Lagssss\",\n        \"latitude\": 23.84,\n        \"longitude\": 25.34,\n        \"distance\": 711.9526515522119\n    },\n    {\n        \"name\": \"Ivory Restaurant 3\",\n        \"address\": \"Iboro Lagssss\",\n        \"latitude\": 23.84,\n        \"longitude\": 25.34,\n        \"distance\": 711.9526515522119\n    }\n]"
+				},
+				{
+					"name": "Get Restaurants",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3015/v1/restaurant/get?city=Lagos&latitude=23.84&longitude=25.333&distance=1000&ratings=0.0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3015",
+							"path": [
+								"v1",
+								"restaurant",
+								"get"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Lagos"
+								},
+								{
+									"key": "latitude",
+									"value": "23.84"
+								},
+								{
+									"key": "longitude",
+									"value": "25.333"
+								},
+								{
+									"key": "distance",
+									"value": "1000"
+								},
+								{
+									"key": "ratings",
+									"value": "0.0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "239"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ef-JhadUxhoCw0ZPzksPNQFcfQFLNc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Feb 2024 16:51:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"Ivory Restaurant\",\n        \"address\": \"Iboro Lagssss\",\n        \"latitude\": 23.84,\n        \"longitude\": 25.34,\n        \"distance\": 711.9526515522119\n    },\n    {\n        \"name\": \"Ivory Restaurant 3\",\n        \"address\": \"Iboro Lagssss\",\n        \"latitude\": 23.84,\n        \"longitude\": 25.34,\n        \"distance\": 711.9526515522119\n    }\n]"
+				},
+				{
+					"name": "Get Restaurants",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3015/v1/restaurant/get?city=Lagos&latitude=23.84&longitude=25.333&distance=1000&ratings=0.0&maxPrice=100000&minPrice=1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3015",
+							"path": [
+								"v1",
+								"restaurant",
+								"get"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Lagos"
+								},
+								{
+									"key": "latitude",
+									"value": "23.84"
+								},
+								{
+									"key": "longitude",
+									"value": "25.333"
+								},
+								{
+									"key": "distance",
+									"value": "1000"
+								},
+								{
+									"key": "ratings",
+									"value": "0.0"
+								},
+								{
+									"key": "maxPrice",
+									"value": "100000"
+								},
+								{
+									"key": "minPrice",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "121"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"79-lJg4LOhlo+KfOOPOL4+l3nElX98\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Feb 2024 16:59:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"Ivory Restaurant 3\",\n        \"address\": \"Iboro Lagssss\",\n        \"latitude\": 23.84,\n        \"longitude\": 25.34,\n        \"distance\": 711.9526515522119\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create Restaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ivory Restaurant 3\",\n    \"address\": \"Iboro Lagssss\",\n    \"city\": \"Lagos\",\n    \"latitude\": 23.84,\n    \"longitude\": 25.34,\n    \"cuisines\" : [ \"African\", \"Indian\"],\n    \"minPrice\": 10000,\n    \"maxPrice\" : 30000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3015/v1/restaurant/create"
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ivory Restaurant 3\",\n    \"address\": \"Iboro Lagssss\",\n    \"city\": \"Lagos\",\n    \"latitude\": 23.84,\n    \"longitude\": 25.34,\n    \"cuisines\" : [ \"African\", \"Indian\"],\n    \"minPrice\": 10000,\n    \"maxPrice\" : 30000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3015/v1/restaurant/create"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "90"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5a-glGpGp0tC/KZ52C8KLoLW+D4BC4\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Feb 2024 16:14:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Ivory Restaurant 3\",\n    \"address\": \"Iboro Lagssss\",\n    \"latitude\": 23.84,\n    \"longitude\": 25.34\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Single Restaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3015/v1/restaurant/:identifier",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3015",
+					"path": [
+						"v1",
+						"restaurant",
+						":identifier"
+					],
+					"variable": [
+						{
+							"key": "identifier",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Single Restaurant",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3015/v1/restaurant/:identifier",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3015",
+							"path": [
+								"v1",
+								"restaurant",
+								":identifier"
+							],
+							"variable": [
+								{
+									"key": "identifier",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "88"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"58-0maAep4npj3TAA9FDgEgJ1x4yPk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Feb 2024 16:23:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Ivory Restaurant\",\n    \"address\": \"Iboro Lagssss\",\n    \"latitude\": 23.34,\n    \"longitude\": 25.34\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Restaurant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3015/v1/restaurant/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3015",
+					"path": [
+						"v1",
+						"restaurant",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3015/v1/restaurant/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3015",
+							"path": [
+								"v1",
+								"restaurant",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20-MVnRB90HU3NmHQea9QUJD4KYVZw\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Feb 2024 16:18:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"restaurant deleted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Restaurant",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Abiodun Restaurant\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3015/v1/restaurant/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3015",
+					"path": [
+						"v1",
+						"restaurant",
+						":id"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Abiodun Restaurant",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Restaurant",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Abiodun Restaurant\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3015/v1/restaurant/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3015",
+							"path": [
+								"v1",
+								"restaurant",
+								":id"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Abiodun Restaurant",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "90"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5a-87kCMkpx2EPO9do7MqEqv7gBNz8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Feb 2024 16:28:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Abiodun Restaurant\",\n    \"address\": \"Iboro Lagssss\",\n    \"latitude\": 23.34,\n    \"longitude\": 25.34\n}"
+				}
+			]
+		}
+	]
+}
