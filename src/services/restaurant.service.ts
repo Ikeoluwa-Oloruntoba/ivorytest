@@ -29,6 +29,7 @@ export class RestaurantService {
 
       }
 
+
     async getRestaurantWithinDistance(data: GetRestaurantsDto): Promise<RestaurantResponse[]>{
 
         const { city, latitude, longitude, distance, maxPrice, minPrice, cuisine, ratings } = data;
@@ -72,6 +73,7 @@ export class RestaurantService {
       
         return getRestaurantWithDistance;
     }
+
 
 
     async getRestaurantByAny(identifier: any): Promise<RestaurantResponse>{
@@ -126,6 +128,8 @@ export class RestaurantService {
         return this.restaurantRepo.deleteRestaurant(Number(id));
     }
 
+
+    //Private Methodes 
 
     private async getRestaurantWithDistance(
         latitude: number,

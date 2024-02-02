@@ -58,10 +58,7 @@ export class PrismaRestaurantRepository implements IRestaurant {
 
         const findCity = await this.prisma.restaurant.findFirst({
             where: {
-                city:  {
-                    contains: city.toString(),
-                    mode: 'insensitive',
-                }
+                city: city.toString()
             },
           });
 
@@ -82,10 +79,6 @@ export class PrismaRestaurantRepository implements IRestaurant {
       
         return restaurants;
       }
-
-
-
-
 
     async getRestaurantById(id: number): Promise<Restaurant> {
         return this.prisma.restaurant.findUnique({

@@ -13,6 +13,7 @@ export class GetRestaurantsDto {
   longitude: number;
 
   @IsNotEmpty()
+  @IsPositive()
   distance: number;
 
   @IsOptional()

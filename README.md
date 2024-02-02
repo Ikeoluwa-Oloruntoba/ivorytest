@@ -1,73 +1,189 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+```markdown
+# Restaurant Application
 
-## Description
+## Overview
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+The Restaurant Application is a web-based platform designed to help users discover restaurants within a city based on their location and preferences. The application provides a seamless experience for users looking to explore and find nearby dining options.
+
+## Features
+
+- **Restaurant Search**: Users can search for restaurants based on the city, their current location, and desired distance.
+
+- **Detailed Restaurant Information**: The application displays detailed information about each restaurant, including its name, address, latitude, and longitude.
+
+- **Filtering Options**: Users can filter restaurants by cuisine type, price range, ratings, and other criteria.
+
+- **Rate Limiting**: Implemented rate limiting to prevent abuse of the API and ensure fair usage.
+
+## API Endpoints
+
+### `GET /v1/restaurants`
+
+Get a list of restaurants based on location and preferences.
+
+**Parameters:**
+- `city`: The name of the city where the user wants to find restaurants.
+- `latitude` and `longitude`: The user's current location coordinates (latitude and longitude).
+- `distance`: The maximum distance in meters from the user's location to the restaurant.
+
+**Example Request:**
+```http
+GET /v1/restaurants?city=New%20York&latitude=40.7128&longitude=-74.0060&distance=1000
+```
+
+**Example Response:**
+```json
+{
+  "restaurants": [
+    {
+      "name": "Cafe Delight",
+      "address": "123 Main St, New York, NY",
+      "latitude": 40.7112,
+      "longitude": -74.0055
+    },
+    {
+      "name": "Pasta Paradise",
+      "address": "456 Elm St, New York, NY",
+      "latitude": 40.7145,
+      "longitude": -74.0082
+    }
+  ]
+}
+```
+
+### `GET /v1/restaurants/:identifier`
+
+Get details of a specific restaurant.
+
+The Identifier can be a city, name or Id
+
+**Example Request:**
+```http
+GET /v1/restaurants/1
+```
+
+**Example Response:**
+```json
+{
+  "name": "Cafe Delight",
+  "address": "123 Main St, New York, NY",
+  "latitude": 40.7112,
+  "longitude": -74.0055
+}
+```
+
+### `POST /v1/restaurants`
+
+Add a new restaurant.
+
+**Example Request:**
+```http
+POST /v1/restaurants
+Content-Type: application/json
+
+{
+  "name": "New Restaurant",
+  "address": "789 Oak St, New York, NY",
+  "latitude": 40.7189,
+  "longitude": -74.0032
+}
+```
+
+**Example Response:**
+```json
+{
+  "name": "New Restaurant",
+  "address": "789 Oak St, New York, NY",
+  "latitude": 40.7189,
+  "longitude": -74.0032
+}
+```
+
+### `PUT /v1/restaurants/:id`
+
+Update an existing restaurant.
+
+**Example Request:**
+```http
+PUT /v1/restaurants/1
+Content-Type: application/json
+
+{
+  "name": "Updated Restaurant",
+  "address": "789 Oak St, New York, NY",
+  "latitude": 40.7189,
+  "longitude": -74.0032
+}
+```
+
+**Example Response:**
+```json
+{
+  "name": "Updated Restaurant",
+  "address": "789 Oak St, New York, NY",
+  "latitude": 40.7189,
+  "longitude": -74.0032
+}
+```
+
+### `DELETE /v1/restaurants/:id`
+
+Delete an existing restaurant.
+
+**Example Request:**
+```http
+DELETE /v1/restaurants/1
+```
+
+**Example Response:**
+```json
+{
+  "response": "Restaurant deleted"
+}
+```
 
 ## Installation
 
-```bash
-$ npm install
-```
+To run the Restaurant Application locally, follow these steps:
 
-## Running the app
+1. Clone the repository:
 
-```bash
-# development
-$ npm run start
+   ```bash
+   git clone https://github.com/your-username/restaurant-application.git
+   ```
 
-# watch mode
-$ npm run start:dev
+2. Install dependencies:
 
-# production mode
-$ npm run start:prod
-```
+   ```bash
+   cd restaurant-application
+   npm install
+   ```
 
-## Test
+3. Configure environment variables (if applicable).
 
-```bash
-# unit tests
-$ npm run test
+4. Run the application:
 
-# e2e tests
-$ npm run test:e2e
+   ```bash
+   npm start
+   ```
 
-# test coverage
-$ npm run test:cov
-```
+Visit `http://localhost:3015` in your browser to access the application.
 
-## Support
+## Technologies Used
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- Node.js
+- NestJS 
+- PostgreSQL 
+- Prisma ORM
+- Docker
 
-## Stay in touch
+## Contributors
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- [Ikeoluwa Oloruntoba](https://github.com/Ikeoluwa-Oloruntoba)
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
+```
