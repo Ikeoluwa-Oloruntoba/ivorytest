@@ -9,7 +9,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
 
-  const config = new DocumentBuilder().setTitle('Simpli').setDescription('Simpli API DOCS').setVersion('1.0').addTag('API').build();
+  const config = new DocumentBuilder().setTitle('Find Restaurant API').setDescription('API documentation - interview assessment').setVersion('1.0').addTag('API').build();
 
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
